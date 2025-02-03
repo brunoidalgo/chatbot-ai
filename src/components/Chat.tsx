@@ -12,7 +12,6 @@ export function Chat() {
 
     const { messages, input, handleInputChange, handleSubmit } = useChat({
         api: '/api/chat',
-        // key: process.env.OPEN_AI_KEY
     });
 
     return (
@@ -29,13 +28,13 @@ export function Chat() {
                                 {message.role === 'user' && (
                                     <Avatar>
                                         <AvatarFallback>DF</AvatarFallback>
-                                        <AvatarImage src="https://github.com/brunoidalgo.png" className="max-w-[50px] rounded-full" />
+                                        <AvatarImage src="https://github.com/brunoidalgo.png" className="max-w-[40px] rounded-full" />
                                     </Avatar>
                                 )}
                                 {message.role === 'assistant' && (
                                     <Avatar>
                                         <AvatarFallback>RS</AvatarFallback>
-                                        <AvatarImage src="https://www.smarapd.com.br/assets/core/publica/imagens/logo.png" className="max-w-[50px] rounded-full" />
+                                        <AvatarImage src="https://www.smarapd.com.br/assets/core/publica/imagens/logo.png" className="max-w-[40px] rounded-full" />
                                     </Avatar>
                                 )}
                                 <div className="leading-relaxed">
