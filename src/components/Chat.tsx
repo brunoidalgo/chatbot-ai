@@ -17,8 +17,8 @@ export function Chat() {
     return (
         <Card className="w-[440px] max-sm:w-full max-sm:m-6">
             <CardHeader className="text-slate-900">
-                <CardTitle>SMAR AI</CardTitle>
-                <CardDescription>Estamos aqui para lhe ajudar a entender mais sobre o nosso sistema</CardDescription>
+                <CardTitle>CHATBOT AI</CardTitle>
+                <CardDescription>Estou aqui para lhe ajudar sou um especialista em automação de testes!</CardDescription>
             </CardHeader>
             <CardContent>
                 <ScrollArea className='h-[600px] w-full pr-4'>
@@ -34,11 +34,11 @@ export function Chat() {
                                 {message.role === 'assistant' && (
                                     <Avatar>
                                         <AvatarFallback>RS</AvatarFallback>
-                                        <AvatarImage src="https://www.smarapd.com.br/assets/core/publica/imagens/logo.png" className="max-w-[40px] rounded-full" />
+                                        <AvatarImage src="https://github.com/rocketseat.png" className="max-w-[40px] rounded-full" />
                                     </Avatar>
                                 )}
                                 <div className="leading-relaxed">
-                                    <span className="block font-bold text-slate-800">{message.role === 'user' ? 'Usuário' : 'SMAR AI'}: </span>
+                                    <span className="block font-bold text-slate-800">{message.role === 'user' ? 'Usuário' : 'Chatbot AI'}: </span>
                                     <ReactMarkdown>{message.content}</ReactMarkdown>
                                 </div>
                             </div>
@@ -49,7 +49,7 @@ export function Chat() {
             <CardFooter>
                 <form className="w-full flex gap-2" onSubmit={handleSubmit}>
                     <Input placeholder="Como posso te ajudar hoje ?" value={input} onChange={handleInputChange} />
-                    <Button className='bg-[#14a984] hover:bg-[#77c3aa]' type="submit">Enviar</Button>
+                    <Button className='bg-zinc-950 hover:bg-zinc-700' type="submit">Enviar</Button>
                 </form>
             </CardFooter>
         </Card>

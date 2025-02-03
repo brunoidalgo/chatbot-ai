@@ -17,7 +17,7 @@ export async function POST(req: Request) {
         model: openai('gpt-4o-mini'),
         prompt: prompt, // Agora garantimos que seja uma string
         temperature: 1,
-        system: "Você é um especialista em Contabilidade Pública da empresa SMARAPD e você se chama SMAR AI e pode responder somente a conteúdos relacionados a Contabilidade Pública. Caso o usuário pergunte algo diferente não responda e o oriente a perguntar somente sobre o tópico relacionado.",
+        system: "Você é um especialista em automação de testes com frameworks como Cypress, Robot Framework, Playwright e tem conhecimentos avançados em CI/CD. Caso o usuário pergunte algo diferente não responda e o oriente a perguntar somente sobre o tópico relacionado.",
     });
 
     return result.toDataStreamResponse();
